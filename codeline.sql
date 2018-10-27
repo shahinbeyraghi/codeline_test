@@ -11,7 +11,7 @@
  Target Server Version : 100109
  File Encoding         : 65001
 
- Date: 27/10/2018 19:41:44
+ Date: 27/10/2018 19:50:34
 */
 
 SET NAMES utf8mb4;
@@ -97,7 +97,7 @@ CREATE TABLE `wp_options`  (
   `autoload` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`) USING BTREE,
   UNIQUE INDEX `option_name`(`option_name`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 292 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 297 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of wp_options
@@ -179,7 +179,7 @@ INSERT INTO `wp_options` VALUES (74, 'comments_per_page', '50', 'yes');
 INSERT INTO `wp_options` VALUES (75, 'default_comments_page', 'newest', 'yes');
 INSERT INTO `wp_options` VALUES (76, 'comment_order', 'asc', 'yes');
 INSERT INTO `wp_options` VALUES (77, 'sticky_posts', 'a:0:{}', 'yes');
-INSERT INTO `wp_options` VALUES (78, 'widget_categories', 'a:2:{i:2;a:4:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:12:\"hierarchical\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}', 'yes');
+INSERT INTO `wp_options` VALUES (78, 'widget_categories', 'a:2:{i:2;a:4:{s:5:\"title\";s:9:\"shortcode\";s:5:\"count\";i:0;s:12:\"hierarchical\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}', 'yes');
 INSERT INTO `wp_options` VALUES (79, 'widget_text', 'a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}', 'yes');
 INSERT INTO `wp_options` VALUES (80, 'widget_rss', 'a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}', 'yes');
 INSERT INTO `wp_options` VALUES (81, 'uninstall_plugins', 'a:0:{}', 'no');
@@ -217,7 +217,7 @@ INSERT INTO `wp_options` VALUES (112, 'theme_mods_twentyseventeen', 'a:2:{s:18:\
 INSERT INTO `wp_options` VALUES (116, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.9.8.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.9.8.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-4.9.8-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-4.9.8-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.9.8\";s:7:\"version\";s:5:\"4.9.8\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.7\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1540652311;s:15:\"version_checked\";s:5:\"4.9.8\";s:12:\"translations\";a:0:{}}', 'no');
 INSERT INTO `wp_options` VALUES (122, '_site_transient_timeout_browser_ca81f4584823fbff592e88470c6a057c', '1541227391', 'no');
 INSERT INTO `wp_options` VALUES (123, '_site_transient_browser_ca81f4584823fbff592e88470c6a057c', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:12:\"70.0.3538.67\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no');
-INSERT INTO `wp_options` VALUES (125, '_site_transient_timeout_community-events-d41d8cd98f00b204e9800998ecf8427e', '1540665793', 'no');
+INSERT INTO `wp_options` VALUES (125, '_site_transient_timeout_community-events-d41d8cd98f00b204e9800998ecf8427e', '1540700209', 'no');
 INSERT INTO `wp_options` VALUES (126, '_site_transient_community-events-d41d8cd98f00b204e9800998ecf8427e', 'a:2:{s:8:\"location\";a:1:{s:2:\"ip\";b:0;}s:6:\"events\";a:0:{}}', 'no');
 INSERT INTO `wp_options` VALUES (127, 'can_compress_scripts', '1', 'no');
 INSERT INTO `wp_options` VALUES (128, '_transient_timeout_feed_ac0b00fe65abe10e0c5b588f3ed8c7ca', '1540665794', 'no');
@@ -237,7 +237,6 @@ INSERT INTO `wp_options` VALUES (146, '_site_transient_update_themes', 'O:8:\"st
 INSERT INTO `wp_options` VALUES (148, 'theme_mods_codeline-test', 'a:4:{i:0;b:0;s:18:\"nav_menu_locations\";a:1:{s:7:\"primary\";i:9;}s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1540654053;s:4:\"data\";a:5:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:5:\"home1\";a:0:{}s:5:\"home2\";a:0:{}s:5:\"home3\";a:0:{}}}}', 'yes');
 INSERT INTO `wp_options` VALUES (149, 'widget_unite_tabbed_widget', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes');
 INSERT INTO `wp_options` VALUES (150, 'widget_unite-social', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes');
-INSERT INTO `wp_options` VALUES (158, 'category_children', 'a:0:{}', 'yes');
 INSERT INTO `wp_options` VALUES (186, '_transient_timeout_plugin_slugs', '1540738784', 'no');
 INSERT INTO `wp_options` VALUES (187, '_transient_plugin_slugs', 'a:5:{i:0;s:19:\"akismet/akismet.php\";i:1;s:49:\"cpt-bootstrap-carousel/cpt-bootstrap-carousel.php\";i:2;s:59:\"custom-post-type-permalinks/custom-post-type-permalinks.php\";i:3;s:9:\"hello.php\";i:4;s:35:\"simple-taxonomy/simple-taxonomy.php\";}', 'no');
 INSERT INTO `wp_options` VALUES (188, 'recently_activated', 'a:3:{s:59:\"custom-post-type-permalinks/custom-post-type-permalinks.php\";i:1540652383;s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";i:1540627061;s:56:\"simple-taxonomy-ordering/yikes-custom-taxonomy-order.php\";i:1540626935;}', 'yes');
@@ -262,8 +261,9 @@ INSERT INTO `wp_options` VALUES (277, '_transient_twentysixteen_categories', '1'
 INSERT INTO `wp_options` VALUES (286, 'country_children', 'a:0:{}', 'yes');
 INSERT INTO `wp_options` VALUES (287, 'year_children', 'a:0:{}', 'yes');
 INSERT INTO `wp_options` VALUES (288, 'actors_children', 'a:0:{}', 'yes');
-INSERT INTO `wp_options` VALUES (290, '_transient_is_multi_author', '0', 'yes');
-INSERT INTO `wp_options` VALUES (291, '_transient_all_the_cool_cats', '1', 'yes');
+INSERT INTO `wp_options` VALUES (292, 'category_children', 'a:0:{}', 'yes');
+INSERT INTO `wp_options` VALUES (295, '_transient_is_multi_author', '0', 'yes');
+INSERT INTO `wp_options` VALUES (296, '_transient_all_the_cool_cats', '1', 'yes');
 
 -- ----------------------------
 -- Table structure for wp_postmeta
@@ -277,7 +277,7 @@ CREATE TABLE `wp_postmeta`  (
   PRIMARY KEY (`meta_id`) USING BTREE,
   INDEX `post_id`(`post_id`) USING BTREE,
   INDEX `meta_key`(`meta_key`(191)) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 124 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 128 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of wp_postmeta
@@ -285,7 +285,7 @@ CREATE TABLE `wp_postmeta`  (
 INSERT INTO `wp_postmeta` VALUES (1, 2, '_wp_page_template', 'default');
 INSERT INTO `wp_postmeta` VALUES (2, 3, '_wp_page_template', 'default');
 INSERT INTO `wp_postmeta` VALUES (5, 6, '_edit_last', '1');
-INSERT INTO `wp_postmeta` VALUES (8, 6, '_edit_lock', '1540655498:1');
+INSERT INTO `wp_postmeta` VALUES (8, 6, '_edit_lock', '1540657164:1');
 INSERT INTO `wp_postmeta` VALUES (9, 1, '_edit_lock', '1540624124:1');
 INSERT INTO `wp_postmeta` VALUES (10, 1, '_wp_trash_meta_status', 'publish');
 INSERT INTO `wp_postmeta` VALUES (11, 1, '_wp_trash_meta_time', '1540624272');
@@ -323,7 +323,7 @@ INSERT INTO `wp_postmeta` VALUES (113, 9, '_wp_trash_meta_time', '1540655081');
 INSERT INTO `wp_postmeta` VALUES (114, 9, '_wp_desired_post_slug', 'films-2');
 INSERT INTO `wp_postmeta` VALUES (115, 6, 'ticket_price', '100$');
 INSERT INTO `wp_postmeta` VALUES (118, 28, '_edit_last', '1');
-INSERT INTO `wp_postmeta` VALUES (119, 28, '_edit_lock', '1540655728:1');
+INSERT INTO `wp_postmeta` VALUES (119, 28, '_edit_lock', '1540657005:1');
 INSERT INTO `wp_postmeta` VALUES (120, 28, 'release_date', 'Sep 21, 2018');
 INSERT INTO `wp_postmeta` VALUES (121, 28, 'ticket_price', '50$');
 
@@ -369,7 +369,7 @@ INSERT INTO `wp_posts` VALUES (1, 1, '2018-10-27 06:42:02', '2018-10-27 06:42:02
 INSERT INTO `wp_posts` VALUES (2, 1, '2018-10-27 06:42:02', '2018-10-27 06:42:02', 'This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\n\n<blockquote>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin\' caught in the rain.)</blockquote>\n\n...or something like this:\n\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\n\nAs a new WordPress user, you should go to <a href=\"http://localhost/test/wordpress/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!', 'Sample Page', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2018-10-27 06:42:02', '2018-10-27 06:42:02', '', 0, 'http://localhost/test/wordpress/?page_id=2', 0, 'page', '', 0);
 INSERT INTO `wp_posts` VALUES (3, 1, '2018-10-27 06:42:02', '2018-10-27 06:42:02', '<h2>Who we are</h2><p>Our website address is: http://localhost/test/wordpress.</p><h2>What personal data we collect and why we collect it</h2><h3>Comments</h3><p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor&#8217;s IP address and browser user agent string to help spam detection.</p><p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p><h3>Media</h3><p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p><h3>Contact forms</h3><h3>Cookies</h3><p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><p>If you have an account and you log in to this site, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &quot;Remember Me&quot;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p><h3>Embedded content from other websites</h3><p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p><p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p><h3>Analytics</h3><h2>Who we share your data with</h2><h2>How long we retain your data</h2><p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p><p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p><h2>What rights you have over your data</h2><p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p><h2>Where we send your data</h2><p>Visitor comments may be checked through an automated spam detection service.</p><h2>Your contact information</h2><h2>Additional information</h2><h3>How we protect your data</h3><h3>What data breach procedures we have in place</h3><h3>What third parties we receive data from</h3><h3>What automated decision making and/or profiling we do with user data</h3><h3>Industry regulatory disclosure requirements</h3>', 'Privacy Policy', '', 'draft', 'closed', 'open', '', 'privacy-policy', '', '', '2018-10-27 06:42:02', '2018-10-27 06:42:02', '', 0, 'http://localhost/test/wordpress/?page_id=3', 0, 'page', '', 0);
 INSERT INTO `wp_posts` VALUES (4, 1, '2018-10-27 06:43:11', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2018-10-27 06:43:11', '0000-00-00 00:00:00', '', 0, 'http://localhost/test/wordpress/?p=4', 0, 'post', '', 0);
-INSERT INTO `wp_posts` VALUES (6, 1, '2018-10-27 07:09:45', '2018-10-27 07:09:45', '<div class=\"metadata\">\r\n<div><strong>Director:</strong> Ruben Fleischer</div>\r\n<div><strong>Producer:</strong> Avi Arad, Amy Pascal, Matt Tolmach</div>\r\n<div><strong>Writer:</strong> Kelly Marcel, Todd McFarlane, David Michelinie</div>\r\n<div><strong>Runtime:</strong> 1hr 52m</div>\r\n</div>\r\n<div class=\"synopsis\">\r\n<h3 class=\"strong-heading\">Synopsis</h3>\r\n<div>One of Marvel’s most enigmatic, complex and badass characters comes to the big screen, starring Academy Award® nominated actor Tom Hardy as the lethal protector Venom.</div>\r\n</div>', 'Venom', '', 'publish', 'open', 'open', '', 'films', '', '', '2018-10-27 15:51:09', '2018-10-27 15:51:09', '', 0, 'http://localhost/test/wordpress/?p=6', 0, 'post', '', 0);
+INSERT INTO `wp_posts` VALUES (6, 1, '2018-10-27 07:09:45', '2018-10-27 07:09:45', '<div class=\"metadata\">\r\n<div><strong>Director:</strong> Ruben Fleischer</div>\r\n<div><strong>Producer:</strong> Avi Arad, Amy Pascal, Matt Tolmach</div>\r\n<div><strong>Writer:</strong> Kelly Marcel, Todd McFarlane, David Michelinie</div>\r\n<div><strong>Runtime:</strong> 1hr 52m</div>\r\n</div>\r\n<div class=\"synopsis\">\r\n<h3 class=\"strong-heading\">Synopsis</h3>\r\n<div>One of Marvel’s most enigmatic, complex and badass characters comes to the big screen, starring Academy Award® nominated actor Tom Hardy as the lethal protector Venom.</div>\r\n</div>', 'Venom', '', 'publish', 'open', 'open', '', 'films', '', '', '2018-10-27 16:19:22', '2018-10-27 16:19:22', '', 0, 'http://localhost/test/wordpress/?p=6', 0, 'post', '', 0);
 INSERT INTO `wp_posts` VALUES (7, 1, '2018-10-27 07:09:46', '2018-10-27 07:09:46', '', 'Films', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2018-10-27 07:09:46', '2018-10-27 07:09:46', '', 6, 'http://localhost/test/wordpress/2018/10/27/6-revision-v1/', 0, 'revision', '', 0);
 INSERT INTO `wp_posts` VALUES (8, 1, '2018-10-27 07:11:12', '2018-10-27 07:11:12', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world!', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2018-10-27 07:11:12', '2018-10-27 07:11:12', '', 1, 'http://localhost/test/wordpress/2018/10/27/1-revision-v1/', 0, 'revision', '', 0);
 INSERT INTO `wp_posts` VALUES (9, 1, '2018-10-27 07:20:05', '2018-10-27 07:20:05', '', 'Films2', '', 'trash', 'open', 'open', '', 'films-2__trashed', '', '', '2018-10-27 15:44:41', '2018-10-27 15:44:41', '', 0, 'http://localhost/test/wordpress/?p=9', 0, 'post', '', 0);
@@ -386,7 +386,7 @@ INSERT INTO `wp_posts` VALUES (21, 1, '2018-10-27 08:20:50', '0000-00-00 00:00:0
 INSERT INTO `wp_posts` VALUES (22, 1, '2018-10-27 08:22:35', '2018-10-27 08:22:35', ' ', '', '', 'publish', 'closed', 'closed', '', '22', '', '', '2018-10-27 08:24:04', '2018-10-27 08:24:04', '', 0, 'http://localhost/test/wordpress/?p=22', 1, 'nav_menu_item', '', 0);
 INSERT INTO `wp_posts` VALUES (25, 1, '2018-10-27 08:31:28', '2018-10-27 08:31:28', '', 'test', '', 'publish', 'closed', 'closed', '', 'test', '', '', '2018-10-27 08:31:28', '2018-10-27 08:31:28', '', 0, 'http://localhost/test/wordpress/?post_type=cptbc&#038;p=25', 0, 'cptbc', '', 0);
 INSERT INTO `wp_posts` VALUES (27, 1, '2018-10-27 15:25:42', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2018-10-27 15:25:42', '0000-00-00 00:00:00', '', 0, 'http://localhost/test/wordpress/?p=27', 0, 'post', '', 0);
-INSERT INTO `wp_posts` VALUES (28, 1, '2018-10-27 15:55:59', '2018-10-27 15:55:59', '<div><strong>Director:</strong> Jacques Audiard</div>\r\n<div><strong>Producer:</strong> Chelsea Barnard, Pascal Caucheteux, Michael De Luca</div>\r\n<div><strong>Writer:</strong> Jacques Audiard, Thomas Bidegain, Patrick Dewitt</div>', 'Sisters Brothers', '', 'publish', 'open', 'open', '', 'sisters-brothers', '', '', '2018-10-27 15:55:59', '2018-10-27 15:55:59', '', 0, 'http://localhost/test/wordpress/?p=28', 0, 'post', '', 0);
+INSERT INTO `wp_posts` VALUES (28, 1, '2018-10-27 15:55:59', '2018-10-27 15:55:59', '<div><strong>Director:</strong> Jacques Audiard</div>\r\n<div><strong>Producer:</strong> Chelsea Barnard, Pascal Caucheteux, Michael De Luca</div>\r\n<div><strong>Writer:</strong> Jacques Audiard, Thomas Bidegain, Patrick Dewitt</div>', 'Sisters Brothers', '', 'publish', 'open', 'open', '', 'sisters-brothers', '', '', '2018-10-27 16:19:05', '2018-10-27 16:19:05', '', 0, 'http://localhost/test/wordpress/?p=28', 0, 'post', '', 0);
 INSERT INTO `wp_posts` VALUES (29, 1, '2018-10-27 15:55:59', '2018-10-27 15:55:59', '<div><strong>Director:</strong> Jacques Audiard</div>\r\n<div><strong>Producer:</strong> Chelsea Barnard, Pascal Caucheteux, Michael De Luca</div>\r\n<div><strong>Writer:</strong> Jacques Audiard, Thomas Bidegain, Patrick Dewitt</div>', 'Sisters Brothers', '', 'inherit', 'closed', 'closed', '', '28-revision-v1', '', '', '2018-10-27 15:55:59', '2018-10-27 15:55:59', '', 28, 'http://localhost/test/wordpress/2018/10/27/28-revision-v1/', 0, 'revision', '', 0);
 
 -- ----------------------------
@@ -405,19 +405,19 @@ CREATE TABLE `wp_term_relationships`  (
 -- Records of wp_term_relationships
 -- ----------------------------
 INSERT INTO `wp_term_relationships` VALUES (1, 1, 0);
-INSERT INTO `wp_term_relationships` VALUES (6, 1, 0);
 INSERT INTO `wp_term_relationships` VALUES (6, 3, 0);
 INSERT INTO `wp_term_relationships` VALUES (6, 4, 0);
 INSERT INTO `wp_term_relationships` VALUES (6, 5, 0);
 INSERT INTO `wp_term_relationships` VALUES (6, 6, 0);
 INSERT INTO `wp_term_relationships` VALUES (6, 7, 0);
+INSERT INTO `wp_term_relationships` VALUES (6, 13, 0);
 INSERT INTO `wp_term_relationships` VALUES (9, 1, 0);
 INSERT INTO `wp_term_relationships` VALUES (22, 9, 0);
-INSERT INTO `wp_term_relationships` VALUES (28, 1, 0);
 INSERT INTO `wp_term_relationships` VALUES (28, 3, 0);
 INSERT INTO `wp_term_relationships` VALUES (28, 10, 0);
 INSERT INTO `wp_term_relationships` VALUES (28, 11, 0);
 INSERT INTO `wp_term_relationships` VALUES (28, 12, 0);
+INSERT INTO `wp_term_relationships` VALUES (28, 13, 0);
 
 -- ----------------------------
 -- Table structure for wp_term_taxonomy
@@ -433,12 +433,12 @@ CREATE TABLE `wp_term_taxonomy`  (
   PRIMARY KEY (`term_taxonomy_id`) USING BTREE,
   UNIQUE INDEX `term_id_taxonomy`(`term_id`, `taxonomy`) USING BTREE,
   INDEX `taxonomy`(`taxonomy`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of wp_term_taxonomy
 -- ----------------------------
-INSERT INTO `wp_term_taxonomy` VALUES (1, 1, 'category', '', 0, 2);
+INSERT INTO `wp_term_taxonomy` VALUES (1, 1, 'category', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (2, 2, 'post_format', '', 0, 0);
 INSERT INTO `wp_term_taxonomy` VALUES (3, 3, 'genre', '', 0, 2);
 INSERT INTO `wp_term_taxonomy` VALUES (4, 4, 'genre', '', 0, 1);
@@ -449,6 +449,7 @@ INSERT INTO `wp_term_taxonomy` VALUES (9, 9, 'nav_menu', '', 0, 1);
 INSERT INTO `wp_term_taxonomy` VALUES (10, 10, 'country', '', 0, 1);
 INSERT INTO `wp_term_taxonomy` VALUES (11, 11, 'year', '', 0, 1);
 INSERT INTO `wp_term_taxonomy` VALUES (12, 12, 'actors', '', 0, 1);
+INSERT INTO `wp_term_taxonomy` VALUES (13, 13, 'category', '', 0, 2);
 
 -- ----------------------------
 -- Table structure for wp_termmeta
@@ -477,7 +478,7 @@ CREATE TABLE `wp_terms`  (
   PRIMARY KEY (`term_id`) USING BTREE,
   INDEX `slug`(`slug`(191)) USING BTREE,
   INDEX `name`(`name`(191)) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of wp_terms
@@ -493,6 +494,7 @@ INSERT INTO `wp_terms` VALUES (9, 'Filmes', 'filmes', 0, 0);
 INSERT INTO `wp_terms` VALUES (10, 'united kingdom', 'united-kingdom', 0, 0);
 INSERT INTO `wp_terms` VALUES (11, '2016', '2016', 0, 0);
 INSERT INTO `wp_terms` VALUES (12, 'Riz Ahmed', 'riz-ahmed', 0, 0);
+INSERT INTO `wp_terms` VALUES (13, '5 movie category', '5-movie-category', 0, 0);
 
 -- ----------------------------
 -- Table structure for wp_usermeta
@@ -530,8 +532,8 @@ INSERT INTO `wp_usermeta` VALUES (16, 1, 'session_tokens', 'a:1:{s:64:\"65791da8
 INSERT INTO `wp_usermeta` VALUES (17, 1, 'wp_dashboard_quick_press_last_post_id', '4');
 INSERT INTO `wp_usermeta` VALUES (18, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}');
 INSERT INTO `wp_usermeta` VALUES (19, 1, 'metaboxhidden_nav-menus', 'a:2:{i:0;s:12:\"add-post_tag\";i:1;s:15:\"add-post_format\";}');
-INSERT INTO `wp_usermeta` VALUES (20, 1, 'wp_user-settings', 'editor=tinymce&posts_list_mode=list&cats=pop');
-INSERT INTO `wp_usermeta` VALUES (21, 1, 'wp_user-settings-time', '1540625907');
+INSERT INTO `wp_usermeta` VALUES (20, 1, 'wp_user-settings', 'editor=tinymce&posts_list_mode=list');
+INSERT INTO `wp_usermeta` VALUES (21, 1, 'wp_user-settings-time', '1540657142');
 INSERT INTO `wp_usermeta` VALUES (22, 1, 'closedpostboxes_post', 'a:0:{}');
 INSERT INTO `wp_usermeta` VALUES (23, 1, 'metaboxhidden_post', 'a:6:{i:0;s:11:\"postexcerpt\";i:1;s:13:\"trackbacksdiv\";i:2;s:16:\"commentstatusdiv\";i:3;s:11:\"commentsdiv\";i:4;s:7:\"slugdiv\";i:5;s:9:\"authordiv\";}');
 INSERT INTO `wp_usermeta` VALUES (24, 1, 'meta-box-order_post', 'a:3:{s:4:\"side\";s:77:\"submitdiv,formatdiv,categorydiv,tagsdiv-post_tag,siderbar-layout,postimagediv\";s:6:\"normal\";s:96:\"postcustom,postexcerpt,trackbacksdiv,commentstatusdiv,commentsdiv,slugdiv,authordiv,revisionsdiv\";s:8:\"advanced\";s:0:\"\";}');
